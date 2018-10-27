@@ -42,7 +42,7 @@
         top:10%;}
 .aside .server {margin-top: 3%;}
 .aside .server li {margin: 3% 0% 3% 10%; cursor: pointer;
-                   color:red; font-weight: bold; font-size: 1.4vh;}
+                   color:red; font-weight: bold; font-size: 1vh;}
 .aside .server li:hover {color:orange;}
 .aside .graph {background: url("../img/graph.png") no-repeat -50% -50%;
                background-size: cover;height: 22vh;
