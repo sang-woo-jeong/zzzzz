@@ -1,0 +1,18 @@
+.sec3 {background: url("../img/bg3.png") no-repeat 50% 50%;
+      position: relative;}
+.sec3 .wrap {width:0%; height: 100vh;
+             position: absolute; top:0; left:50%;
+             overflow: hidden; background: url("../img/bg2.png") no-repeat 50% 50%;
+            animation: bg2 5s linear infinite alternate;}
+            @keyframes bg2 {
+              0% {filter: hue-rotate(0);}
+              100% {filter: hue-rotate(360deg);}  
+            }
+.robomb {position: absolute; left:50%; top:45%;
+        transform: translate(-50%,-50%); z-index: 99;
+        width:10%; animation: rocket 5s linear; animation-play-state: paused;
+        cursor:pointer;}
+        @keyframes rocket {
+          0% {top:55%;}
+          100% {top:45%;}
+        }

@@ -1,0 +1,14 @@
+.sec1 {background: black; position: relative;}
+.sec1 .lylic {color:#00dbd3;
+              position: absolute; left:50%; top:50%;
+              transform: translate(-50%,-50%);
+              font-size:15vh;
+              font-style: Thin;
+             }
+.sec1 img {animation:hue 5s linear infinite alternate;}
+
+@keyframes hue {
+  0% {filter: hue-rotate(0deg);}
+  100% {filter: hue-rotate(360deg);}
+}
+.sec1 span {cursor: pointer;}

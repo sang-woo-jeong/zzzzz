@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>test page</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
+    <link rel="stylesheet" type="text/css" href="./css/sec1.css">
+    <link rel="stylesheet" type="text/css" href="./css/sec2.css">
+    <link rel="stylesheet" type="text/css" href="./css/sec3.css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.js"></script>
+    <script src="./js/dt.js"></script>
+  </head>
+  <body>
+    <audio id="bgm" src="bgm.mp4" loop></audio>
+    <audio id="btbgm" src="button.mp4"></audio>
+    <ul class="countDown">
+      <li class="m">10</li><span> :</span>
+      <li class="s">00</li><span> :</span>
+      <li class="ms">00</li>
+    </ul>
+    <section class="sec1">
+      <p class="lylic"><span onclick="timeline()">Technologic</span></p>
+      <script src="./js/sec1.js"></script>
+    </section>
+    <section class="sec2">
+      <div class="box_fir">
+        <div class="aside">
+          <ul class="server">
+            <p>-----------------------------------SERVER_STATUS</p>
+            <li class="server1" onclick="li(1)">1 - OFFLINE ---------------------------- 400</li>
+            <li class="server2" onclick="li(2)">2 - OFFLINE ---------------------------- 400</li>
+            <li class="server3" onclick="li(3)">3 - OFFLINE ---------------------------- 400</li>
+            <li class="server4" onclick="li(4)">4 - OFFLINE ---------------------------- 400</li>
+            <li class="server5" onclick="li(5)">5 - OFFLINE ---------------------------- 400</li>
+          </ul>
+          <ul class="graph">
+            <p>-------------------------------------TRAFFIC_FLOW</p>
+            <script>
+              $(".server li").on("click",function(){
+                btbgm.play();
+              })
+              for(var i=0;i<10;i++){
+                document.write(`<li class="bar"></li>`)
+              }
+            </script>
+          </ul>
+        </div>
+        <div class="footer">
+          <img class="map" src="./img/map.png"  onmousemove="a(event)">
+          <div class="gps">
+            <p>-------------------------------------------------------GPS_DATA</p>
+            <p class="gd">---------!!!Over the map!!!---------</p>
+          </div>
+        </div>
+        <div class="lense">
+          <img class="lense1" src="./img/lense1.png">
+          <img class="lense2" src="./img/lense2.png">
+          <img class="lense3" src="./img/lense3.png">
+          <img class="lense4" src="./img/lense4.png">
+          <img class="lense5" src="./img/lense5.png">
+        </div>
+        <div class="lense2">
+          <img class="lense1" src="./img/lense1.png">
+          <img class="lense2" src="./img/lense2.png">
+          <img class="lense3" src="./img/lense3.png">
+          <img class="lense4" src="./img/lense4.png">
+          <img class="lense5" src="./img/lense5.png">
+        </div>
+        <p class="title">
+          ://ACCESS_DATA_NODE
+          <span class="smTitle">Server-12-0/Lever2/Monitor_1</span>
+          <sapn class="anycode" style="color:orange;">PORUTHKADVXCVZXVWQEDSFRNBVASDV</span></p>
+      </div>
+      <div class="box_sec">
+        <img class="globe" src="./img/8.gif";>
+        <p class="title" style="color:red; font-weight:bold;">
+            WARNING: DATABASE ATTACKED BY UNDEFINED ENEMEY
+          <span class="smTitle">--------------------404</span>
+        <div class="aside">
+          <img class="robot" src="./img/2.gif"/>
+          <p class="consol">------------------CONSOLE_LOG</p>
+          <p class="cs">message : must update human</p>
+          <script>
+            var cs = document.querySelector(".cs");
+            var o = 0;
+            var itms = setInterval(function(){
+              o++;
+              var cloneCs = cs.cloneNode(true);
+              cloneCs.id = "ccc";
+              var aside = document.querySelectorAll(".aside");
+              aside[1].appendChild(cloneCs);
+            },500);
+            var ctms = setInterval(function(){
+              o++;
+              if(o%5==0){
+                var ccc = document.querySelectorAll("#ccc");
+                for(var i =0;i<6;i++){
+                  ccc[i].remove();
+                }
+              }
+            },500);
+
+          </script>
+        </div>
+        <div class="footer">
+          <div class="noise">
+            <img id="bomb" src="./img/4.gif"/>
+          </div>
+          <div class="noise">
+            <img id="war" src="./img/4.gif"/>
+          </div>
+          <div class="noise">
+            <img src="./img/4.gif"/>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="./js/sec2.js">
+
+
+    </script>
+    <section class="sec3"  onclick="bg()">
+      <img class="robomb" src="./img/robot.png">
+      <div class="wrap"></div>
+      <script>
+        function bg(){
+          $(".wrap").animate({"width":"100%","left":"0"},1000);
+          $(".robomb").attr("src","./img/rocket.png");
+          $(".robomb").css({animationPlayState : "running"})
+        }
+
+      </script>
+    </section>
+  </body>
+</html>
